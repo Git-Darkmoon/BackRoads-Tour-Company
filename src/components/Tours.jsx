@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Title } from "./Title"
+import Tour from "./Tour"
 
 function Tours() {
   const API_URL = "https://course-api.com/react-tours-project"
@@ -31,6 +32,11 @@ function Tours() {
   return (
     <section className="tours-section">
       <Title firstWord={"Featured"} secondWord={"Tours"} />
+      <div className="tours-grid">
+        {tours.map(() => {
+          return <Tour />
+        })}
+      </div>
     </section>
   )
 }
