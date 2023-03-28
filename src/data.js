@@ -1,3 +1,5 @@
+import aboutImg from "./assets/about.jpeg"
+import mainImg from "./assets/main.jpeg"
 import tour1 from "./assets/tour-1.jpeg"
 import tour2 from "./assets/tour-2.jpeg"
 import tour3 from "./assets/tour-3.jpeg"
@@ -95,4 +97,15 @@ export const tours = [
     duration: 27,
     cost: 6300,
   },
+]
+
+export const allImages = [
+  { id: 1, picture: aboutImg },
+  { id: 2, picture: mainImg },
+  { id: 3, picture: tour1 },
+  { id: 4, picture: tour2 },
+  { id: 5, picture: tour3 },
+  { id: 6, picture: tour4 },
+  { id: 7, picture: tour5 },
+  { id: 8, picture: tour6 },
 ]

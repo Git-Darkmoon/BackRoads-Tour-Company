@@ -4,6 +4,8 @@ import About from "./components/About"
 import Services from "./components/Services"
 import Tours from "./components/Tours"
 import Newsletter from "./components/Newsletter"
+import Gallery from "./components/Gallery"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Services />
       <Tours />
       <Newsletter />
+      <Gallery />
+      <Footer />
     </>
   )
 }
