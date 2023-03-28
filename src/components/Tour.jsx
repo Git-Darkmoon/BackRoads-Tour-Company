@@ -1,27 +1,26 @@
-import testImage from "../assets/tour-1.jpeg"
-
-function Tour() {
+function Tour({ image, date, title, info, location, duration, cost }) {
   return (
     <div className="tour-card">
       <div className="tour-imgContainer">
-        <img src={testImage} alt="" />
-        <h4 className="tour-date">August 26th, 2020</h4>
+        <img src={image} alt="" />
+        <h4 className="tour-date">{date}</h4>
       </div>
       <div className="tour-info__container">
-        <h3 className="tour-title">Tibet Adventure</h3>
+        <h3 className="tour-title">{title}</h3>
         <h5 className="tour-info">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem omnis
-          fugit voluptates nostrum ducimus earum, voluptatum minima amet
-          doloribus nobis. <button className="readMore">Read More</button>
+          {info}
+          <button className="readMore">Read More</button>
         </h5>
         <article className="tour-infoBelow">
           <h5 className="country">
-            <i class="fa-sharp fa-solid fa-location-dot"></i>Indonesia
+            <i className="fa-sharp fa-solid fa-location-dot"></i>
+            {location}
           </h5>
           <h5 className="duration">
-            <i class="fa-regular fa-clock"></i>11 days
+            <i className="fa-regular fa-clock"></i>
+            {`${duration} days`}
           </h5>
-          <h5 className="price">From $1400</h5>
+          <h5 className="price">{`From $ ${cost}`}</h5>
         </article>
       </div>
     </div>

@@ -1,40 +1,15 @@
-import { useState, useEffect } from "react"
 import { Title } from "./Title"
 import Tour from "./Tour"
+import { tours } from "../data"
 
 function Tours() {
-  const API_URL = "https://course-api.com/react-tours-project"
-
-  const [loading, setLoading] = useState(true)
-  const [tours, setTours] = useState([])
-
-  const fetchTours = async () => {
-    try {
-      const response = await fetch(API_URL)
-      const toursData = await response.json()
-
-      setTours(toursData)
-      setLoading(false)
-    } catch (error) {
-      setLoading(false)
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    fetchTours()
-  }, [])
-
-  if (loading) {
-    return <main>Loading...</main>
-  }
-
   return (
-    <section className="tours-section">
+    <section className="tours-section" id="Featured">
       <Title firstWord={"Featured"} secondWord={"Tours"} />
+      <h1>Hello world</h1>
       <div className="tours-grid">
-        {tours.map(() => {
-          return <Tour />
+        {tours.map((eachTour) => {
+          return <Tour key={eachTour.id} {...eachTour} />
         })}
       </div>
     </section>
