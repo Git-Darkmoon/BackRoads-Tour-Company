@@ -1,4 +1,4 @@
-import logo from "../assets/icons/logo-upscaled.png"
+import { logo } from "../assets/icons/logo-upscaled.png"
 import React from "react"
 import { linksData } from "../data"
 
